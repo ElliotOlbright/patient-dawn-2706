@@ -50,8 +50,5 @@ ActiveRecord::Schema.define(version: 2021_08_04_150641) do
 
   add_foreign_key "competition_teams", "competitions"
   add_foreign_key "competition_teams", "teams"
-  add_foreign_key "maintenences", "mechanics"
-  add_foreign_key "maintenences", "rides"
   add_foreign_key "players", "teams"
-  add_foreign_key "rides", "parks"
 end
