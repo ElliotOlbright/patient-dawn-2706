@@ -13,4 +13,17 @@ RSpec.describe 'Competition Index Page' do
   it 'is in on the right page' do 
     expect(current_path).to eq(competitions_path)
   end 
+
+  it 'can display all competitions' do 
+    expect(page).to have_content(@comp1.name)
+    expect(page).to have_content(@comp2.name)
+    expect(page).to have_content(@comp3.name)
+    expect(page).to have_content(@comp4.name)
+  end 
+
+  it 'can take user to competition show page' do 
+    click_link "#{@comp1.name}"
+
+    expect(current_path).to eq(competition_path(@comp1.id))
+  end
 end 

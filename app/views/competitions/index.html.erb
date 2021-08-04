@@ -1,1 +1,5 @@
-<h1> Competition Indedx Page</h1>
+<h1>Competition Index Page</h1>
+
+<% @competitions.each do |c| %>
+  <%= link_to "#{c.name}", competition_path(c.id), method: :get %>
+<% end %>
