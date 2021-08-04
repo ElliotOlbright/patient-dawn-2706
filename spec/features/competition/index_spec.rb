@@ -25,5 +25,6 @@ RSpec.describe 'Competition Index Page' do
     click_link "#{@comp1.name}"
 
     expect(current_path).to eq(competition_path(@comp1.id))
+    expect(page).to have_content("#{@comp1.name} Show Page")
   end
 end 

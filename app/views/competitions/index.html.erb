@@ -2,4 +2,5 @@
 
 <% @competitions.each do |c| %>
   <%= link_to "#{c.name}", competition_path(c.id), method: :get %>
+  <br>
 <% end %>
