@@ -14,3 +14,4 @@
   <p>Average Age of Players: <%= t.average_age_of_players %></p>
 <% end %>
 
+<%= link_to 'Register a team', new_team_path, method: :get params: { competition_id:  @competition.id }%>

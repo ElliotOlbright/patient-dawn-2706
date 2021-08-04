@@ -36,6 +36,11 @@ RSpec.describe 'Competition Index Page' do
   it'can display average age of players' do 
     expect(page).to have_content("Average Age of Players: #{@team1.average_age_of_players}")
     expect(page).to have_content("Average Age of Players: #{@team2.average_age_of_players}")
+  end
 
+  it ' take a user toregeister a team' do
+    click_link 'Register a team'
+
+    expect(current_path).to eq(new_team_path)
   end
 end 
